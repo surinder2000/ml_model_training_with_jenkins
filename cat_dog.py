@@ -10,10 +10,10 @@ model.add(Convolution2D(filters=32,kernel_size=(3,3),activation='relu',input_sha
 
 model.add(MaxPooling2D(pool_size=(2, 2)))
 add_layers=0
-while add_layer!=0:
+while add_layers!=0:
     model.add(Convolution2D(filters=64,kernel_size=(3,3),activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
-    add_layer-=1
+    add_layers-=1
 
 model.add(Flatten())
 
