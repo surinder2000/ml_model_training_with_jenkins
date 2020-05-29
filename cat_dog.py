@@ -49,7 +49,7 @@ model.fit(
         validation_data=validation_data)
 model.save('/root/cat_dog.h5')
 
-score = model.evaluate(test_set)
+score = model.evaluate(validation_data)
 
 with open('/root/accuracy.txt','w') as file:
     file.write(str(score[1]*100))
