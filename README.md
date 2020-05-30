@@ -7,7 +7,7 @@ In this project i am going to train ML model by integrating it with git, github,
 3. Job1: Pull the Github repository automatically when some developer push code to Github
 4. Job2: By looking at the code or program file, Jenkins should automatically start the respective machine learning software installed interpreter image container to deploy code and start training( e.g. If code uses CNN, then Jenkins should start the container that has already installed all the softwares required for the CNN processing)
 5. Job3: Train model and predict accuracy
-6. Job4: If accuracy is less than 80% , then tweak the machine learning model architecture and retrain it
+6. Job4: If accuracy is less than 85% , then tweak the machine learning model architecture and retrain it
 7. Job5: Push code to Github master branch and notify that the desired accuracy model is created
 8. Job6: If the container where model is training, fails due to any reason then this job should automatically start the respective container
 
@@ -67,7 +67,7 @@ In this project i am going to train ML model by integrating it with git, github,
 
 * Click on Apply and Save
 
-#### Job4: If accuracy is less than 80% , then tweak the machine learning model architecture and retrain it
+#### Job4: If accuracy is less than 85% , then tweak the machine learning model architecture and retrain it
 * In Build trigger section select Build after other projects are built and put job name **Train model and get accuracy** in the Project to watch box and check Trigger only if build is stable
 
 ![Build trigger](https://github.com/surinder2000/ml_model_training_with_jenkins/blob/master/job41.png)
