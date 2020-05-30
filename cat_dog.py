@@ -9,7 +9,7 @@ model = Sequential()
 model.add(Convolution2D(filters=32,kernel_size=(3,3),activation='relu',input_shape=(64, 64, 3)))
 
 model.add(MaxPooling2D(pool_size=(2, 2)))
-add_layers=0
+add_layers=1
 while add_layers!=0:
     model.add(Convolution2D(filters=64,kernel_size=(3,3),activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -25,7 +25,7 @@ model.summary()
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
-no_of_epochs=1
+no_of_epochs=5
 
 train_datagen = ImageDataGenerator(
         rescale=1./255,
