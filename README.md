@@ -114,7 +114,7 @@ In this project i am going to train ML model by integrating it with git, github,
 
 That's all our setup is ready
 
-Now as soon as the developer commit new ML model in the developer repository it will get automatically pulled by the jenkins job, jenkins job check the model whether it is regression model or neural network model and accordingly launch the respective docker image for training the model, for example if the model is neural network model then jenkins launch the docker images that has tensorflow, keras installed in it. After launching the container jenkins job start the model training and when model gets trained jenkins job check the accuracy of the model if it the desired accuracy is achieved then jenkins job will send email to developer else jenkins job tweak the model and retrain it untill get the desired accuracy.
+Now as soon as the developer commit new ML model in the developer repository it will get automatically pulled by the jenkins job, jenkins job check the model whether it is regression model or neural network model and accordingly launch the respective docker image for training the model, for example if the model is neural network model then jenkins launch the docker images that has tensorflow, keras installed in it. After launching the container jenkins job start the model training and when model gets trained jenkins job check the accuracy of the model if the desired accuracy is achieved then jenkins job will send email to developer else jenkins job tweak the model and retrain it untill get the desired accuracy.
 
 ![Email screenshot](https://github.com/surinder2000/ml_model_training_with_jenkins/blob/master/mailshot.png)
 
