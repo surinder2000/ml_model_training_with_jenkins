@@ -25,6 +25,11 @@ In this project i am going to train ML model by integrating it with git, github,
    [Link to Docker image!](https://hub.docker.com/repository/docker/surinder2000/tensorflow_cpu) 
    
 ### 2. Let's create Jenkins jobs
+#### To create a job in jenkins follow the following three steps
+* Click on New item in the jenkins dashboard a new window will open
+* Enter the job name in the box below Enter an item name (lets say Test job)
+* Click on Freestyle project and then press OK then a new window will open for configuring the job
+
 #### Job 1: Pull the Github repository automatically when some developer push code to Github
 * In Source Control Management section put the Github repository url and branch name
 
@@ -99,7 +104,7 @@ In this project i am going to train ML model by integrating it with git, github,
 #### Job6: If the container where model is training, fails due to any reason then this job should automatically start the respective container
 * In Build trigger section select Build after other projects are built and put job names **Code check, Monitor the model training container** in the Project to watch box and check Trigger only if build is stable
 
-![Build trigger](https://github.com/surinder2000/ml_model_training_with_jenkins/b0lob/master/job61.png)
+![Build trigger](https://github.com/surinder2000/ml_model_training_with_jenkins/blob/master/job61.png)
 
 * In the Build section from Add build step select Execute shell and put the following code in the command box
 
@@ -115,5 +120,5 @@ Now as soon as the developer commit new ML model in the developer repository it 
 
 Following is the build pipeline view of the Jenkins jobs
 
-![Build Pipeline view]!(https://github.com/surinder2000/ml_model_training_with_jenkins/blob/master/buildpipelineview.png)
+![Build Pipeline view](https://github.com/surinder2000/ml_model_training_with_jenkins/blob/master/buildpipelineview.png)
 
